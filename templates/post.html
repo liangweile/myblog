@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block post %}
+{% for post in post_list reversed %}
+<div class="post">
+{{ post.title }}
+{{ post.body }}
+</div>
+{% endfor %}
+{% for comment in comment_list %}
+    {{ comment.username }}
+    {{ comment.content }}
+{% endfor %}
+{% endblock %}
